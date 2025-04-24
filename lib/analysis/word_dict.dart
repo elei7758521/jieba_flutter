@@ -104,7 +104,7 @@ class WordDictionary {
 
     List<String> lines = file.readAsLinesSync();
     for (var line in lines) {
-      List<String> tokens = line.split("[\t ]+");
+      List<String> tokens = line.split(RegExp(r'[\t ]+'));
 
       if (tokens.isEmpty) {
         // Ignore empty line
